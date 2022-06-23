@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/styles/color_apps.dart';
 import '../../../../core/styles/size_apps.dart';
+import '../../../../core/widget/button_widget.dart';
 import '../bloc/auth_bloc.dart';
 import '../bloc/auth_event.dart';
 
@@ -127,19 +128,17 @@ class _LoginPageState extends State<LoginPage> {
                   ),
 
                   const SizedBox(height: 30,),
-                  ElevatedButton(
-                    onPressed: () {
-                      if(_formKey.currentState!.validate()){
-                        _login();
-                      }
-                    },
-                    style: ButtonAppsStyle.submitButton(),
-                    child: const  Text("Log in",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18
-                      ),
-                    ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    width: SizeApps.width(context, size: 0.5),
+                    child: ButtonWidget.submit(
+                      onPress: (){
+                        if(_formKey.currentState!.validate()){
+                          _login();
+                        }
+                      },
+                      text: "Log in",
+                      fontSize: 18),
                   ),
                   const SizedBox(height: 20,),
 
