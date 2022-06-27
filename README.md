@@ -1,6 +1,6 @@
 <h3 id="item-description__introduction">Introduction</h3>
 <hr />
-<p>An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos. They are bought and sold online, frequently with , and they are generally encoded with the same underlying software as many cryptos.</p>
+<p>An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos. They are bought and sold online frequently with cryptocurrency and are generally encoded with the same underlying software as many cryptos.</p>
 <p>&nbsp;</p>
 <h3 id="item-description__feature">Feature</h3>
 <hr />
