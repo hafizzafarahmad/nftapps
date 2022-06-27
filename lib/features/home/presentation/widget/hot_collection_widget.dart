@@ -5,11 +5,14 @@ import 'package:nftapps/core/styles/size_apps.dart';
 import '../../../../core/widget/button_widget.dart';
 import '../../../../core/widget/profile_snippet.dart';
 
+//hot collection section customize here
 Widget hotCollectionWidget(BuildContext context){
+
   return Padding(
     padding: const  EdgeInsets.symmetric(horizontal: 20),
     child: Column(
       children: [
+        //Header title and view all
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -29,6 +32,8 @@ Widget hotCollectionWidget(BuildContext context){
             ButtonWidget.light(text: "View All"),
           ],
         ),
+
+        //body list items
         Container(
           padding: const EdgeInsets.only(top: 10),
           child: Wrap(
@@ -97,7 +102,9 @@ Widget hotCollectionWidget(BuildContext context){
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            //get profile snippet from directory core > widget
             profileSnippet(),
+            //get ButtonWidget from directory core > widget
             ButtonWidget.light(text: "Follow"),
           ],
         )

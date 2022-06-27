@@ -12,14 +12,7 @@ Future<void> init() async {
 
   //! External
   final sharedPreferences = await SharedPreferences.getInstance();
-  const FlutterSecureStorage secureStorage = FlutterSecureStorage();
-
-  ///to get encryption Key
-  // final key = await secureStorage.read(key: 'encryptionKey');
-  // Uint8List encryptionKey = base64Url.decode(key!);
-
   sl.registerLazySingleton(() => sharedPreferences);
-  // sl.registerLazySingleton(() => encryptionKey);
 
   ///BLOC ------------------------------------------------------------------
   ///AUTH
@@ -32,7 +25,7 @@ Future<void> init() async {
   /// REPOSITORY ---------------------------------------------------------------
 
 
-  ///DATA SOURCES LOCAL--------------------------------------------------------------
+  ///DATA SOURCES Remote and Local --------------------------------------------------------------
 
 
 }

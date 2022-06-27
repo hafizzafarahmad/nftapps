@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nftapps/features/auction/presentation/auction_page.dart';
 
 import '../../../../core/widget/button_widget.dart';
 
+//hot bid section customize here
 Widget hotBidWidget(BuildContext context){
   return Column(
     children: [
+      //Header title and view all
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
@@ -24,19 +27,28 @@ Widget hotBidWidget(BuildContext context){
               ],
             ),
 
-            ButtonWidget.light(text: "View All"),
+            //get ButtonWidget from directory core > widget
+            ButtonWidget.light(
+              text: "View All",
+              onPress: (){
+                //Navigate to Auction Page
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const AuctionPage()));
+              }
+            ),
           ],
         ),
       ),
+
+      //body list items
       Container(
-        padding: const EdgeInsets.only(left: 20, top: 10),
+        padding: const EdgeInsets.only(top: 10),
         height: 340,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
             Container(
               width: 230,
-              margin: const EdgeInsets.only(right: 15),
+              margin: const EdgeInsets.only(left: 20,right: 15),
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(30))
               ),

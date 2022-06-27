@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'color_apps.dart';
 
+//customize input field
 class InputAppsStyle{
   // this constructor prevents instantiation and extension.
   InputAppsStyle._();

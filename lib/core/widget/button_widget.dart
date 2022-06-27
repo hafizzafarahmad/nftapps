@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../styles/color_apps.dart';
 
+//all Button of this app customize here
 class ButtonWidget{
   // this constructor prevents instantiation and extension.
   ButtonWidget._();

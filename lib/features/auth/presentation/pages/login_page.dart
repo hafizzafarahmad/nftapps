@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nftapps/core/styles/button_apps_style.dart';
 import 'package:nftapps/core/styles/input_apps_style.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,10 +13,10 @@ class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  LoginPageState createState() => LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class LoginPageState extends State<LoginPage> {
 
   bool _obscureText = false;
   final _formKey = GlobalKey<FormState>();
@@ -35,6 +34,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
+    //dispose controller to prevent memory leaks
     _usernameInput.dispose();
     _passwordInput.dispose();
     super.dispose();
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 60,),
 
-                  ///Input Email
+                  //Input Email
                   TextFormField(
                     controller: _usernameInput,
                     keyboardType: TextInputType.emailAddress,
@@ -80,11 +80,12 @@ class _LoginPageState extends State<LoginPage> {
                       }
                       return null;
                     },
+                    //get InputAppsStyle from core > styles
                     decoration: InputAppsStyle.textField(hint: "Email"),
                   ),
                   const SizedBox(height: 15,),
 
-                  ///Input Password
+                  //Input Password
                   TextFormField(
                     controller: _passwordInput,
                     keyboardType: TextInputType.visiblePassword,
@@ -142,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 20,),
 
-                  ///forgot password
+                  //forgot password
                   Text("Forgot Password?",
                     style: TextStyle(
                         fontSize:  SizeApps.width(context, size: 0.035)
@@ -151,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   const SizedBox(height: 50,),
 
-                  ///login with google or facebook
+                  //login with google or facebook
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

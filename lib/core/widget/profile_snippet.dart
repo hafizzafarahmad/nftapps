@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//profile snippet customize here
 Widget profileSnippet(){
   return Row(
     children: [
@@ -12,13 +13,14 @@ Widget profileSnippet(){
               width: 35,
               fit: BoxFit.fill,),
           ),
+          //Green Dot (status online)
           Positioned(
             right: 0,
             child: Container(
               width: 10,
               height: 10,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                  borderRadius: const BorderRadius.all(Radius.circular(50)),
                   color: Colors.green,
                   border: Border.all(color: Colors.white)
               ),

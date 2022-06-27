@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:pigment/pigment.dart';
 
+//this class is base/primary/custom colors app
 class ColorApps{
   // this constructor prevents instantiation and extension.
   ColorApps._();

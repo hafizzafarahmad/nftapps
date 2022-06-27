@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nftapps/core/platform/scroll_behavior.dart';
-import 'package:nftapps/core/styles/size_apps.dart';
-import 'package:nftapps/core/widget/button_widget.dart';
 import 'package:nftapps/core/widget/footer.dart';
 import 'package:nftapps/features/home/presentation/widget/hot_bid_widget.dart';
 import 'package:nftapps/features/home/presentation/widget/hot_collection_widget.dart';
 
-import '../../../core/styles/color_apps.dart';
 import '../../../core/styles/input_apps_style.dart';
 import '../../../core/widget/app_bar.dart';
 
@@ -29,6 +25,7 @@ class HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
+    //dispose controller to prevent memory leaks
     _searchInput.dispose();
     super.dispose();
   }
@@ -37,9 +34,11 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar:  appBar(),
+      //get appbar widget from core > widget
+      appBar:  AppBarWidget.mainAppBar(),
       body: ScrollConfiguration(
-        behavior: MyScrollBehavior(), //to disable scroll shadow
+        //to disable scroll shadow
+        behavior: MyScrollBehavior(),
         child: SingleChildScrollView(
           physics: const ClampingScrollPhysics(),
           child: Column(
@@ -94,20 +93,18 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
 
-              ///Hot bid
+              //Hot bid
+              //get hotBidWidget from home > presentation > widget
               hotBidWidget(context),
               const SizedBox(height: 30,),
 
-              ///Hot Collection
+              //Hot Collection
+              //get hotCollectionWidget from home > presentation > widget
               hotCollectionWidget(context),
               const SizedBox(height: 30,),
-              const Divider(thickness: 1,),
-              const SizedBox(height: 50,),
-
-              ///footer
+              //footer
+              //get footer widget from core > widget
               footer(context),
-
-              const SizedBox(height: 70,),
             ],
           )
         ),
