@@ -50,10 +50,10 @@ class AppBarWidget{
   }
   static PreferredSizeWidget plainAppBar({required BuildContext context}){
     return PreferredSize(
-      preferredSize: const Size.fromHeight(100),
+      preferredSize: const Size.fromHeight(80),
       child: Container(
-        height: 100,
-        padding: const EdgeInsets.only(top: 20, left: 5, right: 15),
+        height: 80,
+        padding: const EdgeInsets.only(top: 30, left: 5, right: 15),
 
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
