@@ -5,8 +5,8 @@ import 'package:nftapps/core/widget/app_bar.dart';
 import 'package:nftapps/core/widget/button_widget.dart';
 import 'package:nftapps/core/widget/footer.dart';
 
-import '../../../core/styles/size_apps.dart';
-import '../../../core/widget/profile_snippet.dart';
+import '../../../../core/styles/size_apps.dart';
+import '../../../../core/widget/profile_snippet.dart';
 
 class DetailAuctionPage extends StatefulWidget {
   final bool isSold;

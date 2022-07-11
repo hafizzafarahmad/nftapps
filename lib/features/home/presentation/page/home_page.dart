@@ -4,8 +4,8 @@ import 'package:nftapps/core/widget/footer.dart';
 import 'package:nftapps/features/home/presentation/widget/hot_bid_widget.dart';
 import 'package:nftapps/features/home/presentation/widget/hot_collection_widget.dart';
 
-import '../../../core/styles/input_apps_style.dart';
-import '../../../core/widget/app_bar.dart';
+import '../../../../core/styles/input_apps_style.dart';
+import '../../../../core/widget/app_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       //get appbar widget from core > widget
-      appBar:  AppBarWidget.mainAppBar(),
+      appBar:  AppBarWidget.mainAppBar( context: context),
       body: ScrollConfiguration(
         //to disable scroll shadow
         behavior: MyScrollBehavior(),

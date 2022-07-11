@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nftapps/core/styles/size_apps.dart';
-import 'package:nftapps/features/auction/presentation/detail_auction_page.dart';
+import 'package:nftapps/features/auction/presentation/page/detail_auction_page.dart';
 
 import '../../../../core/widget/profile_snippet.dart';
 

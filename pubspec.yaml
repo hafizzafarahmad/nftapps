@@ -92,6 +92,7 @@ flutter:
     - assets/collection/
     - assets/profile/
     - assets/auction/
+    - assets/notification/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

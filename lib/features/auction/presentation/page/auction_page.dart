@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nftapps/core/platform/scroll_behavior.dart';
 import 'package:nftapps/features/auction/presentation/widget/item_list_auction_widget.dart';
 
-import '../../../core/styles/input_apps_style.dart';
-import '../../../core/widget/app_bar.dart';
-import '../../../core/widget/footer.dart';
+import '../../../../core/styles/input_apps_style.dart';
+import '../../../../core/widget/app_bar.dart';
+import '../../../../core/widget/footer.dart';
 
 class AuctionPage extends StatefulWidget {
   const AuctionPage({Key? key}) : super(key: key);
@@ -33,7 +33,7 @@ class _AuctionPageState extends State<AuctionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //get appbar widget from core > widget
-      appBar:  AppBarWidget.mainAppBar(),
+      appBar:  AppBarWidget.mainAppBar(context: context),
       body: ScrollConfiguration(
         //to disable scroll shadow
         behavior: MyScrollBehavior(),

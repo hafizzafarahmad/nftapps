@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:nftapps/features/notification/presentation/page/notification_page.dart';
+import 'package:nftapps/features/profile/presentation/page/profile_page.dart';
 
 //app bar customize here
 class AppBarWidget{
   // this constructor prevents instantiation and extension.
   AppBarWidget._();
 
-  static PreferredSizeWidget mainAppBar(){
+  static PreferredSizeWidget mainAppBar({required BuildContext context}){
     return PreferredSize(
       preferredSize: const Size.fromHeight(100),
       child: Container(
@@ -30,11 +32,17 @@ class AppBarWidget{
             Row(
               children: [
                 IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      //Navigate to Notification Page
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationPage()));
+                    },
                     icon: const Icon(FontAwesomeIcons.bell, size: 23,)
                 ),
                 IconButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      //Navigate to Profile Page
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage(isMyProfile: true,)));
+                    },
                     icon: const Icon(FontAwesomeIcons.user, size: 22,)
                 ),
                 IconButton(
