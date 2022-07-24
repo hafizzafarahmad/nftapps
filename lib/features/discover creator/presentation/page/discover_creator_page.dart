@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nftapps/core/platform/scroll_behavior.dart';
-import 'package:nftapps/features/auction/presentation/widget/item_list_auction_widget.dart';
+import 'package:nftapps/core/styles/size_apps.dart';
 
 import '../../../../core/styles/input_apps_style.dart';
 import '../../../../core/widget/app_bar.dart';
 import '../../../../core/widget/footer.dart';
+import '../widget/item_list_discover_creator_widget.dart';
 
-class AuctionPage extends StatefulWidget {
-  const AuctionPage({Key? key}) : super(key: key);
+class DiscoverCreatorPage extends StatefulWidget {
+  const DiscoverCreatorPage({Key? key}) : super(key: key);
 
   @override
-  State<AuctionPage> createState() => _AuctionPageState();
+  State<DiscoverCreatorPage> createState() => _DiscoverCreatorPageState();
 }
 
-class _AuctionPageState extends State<AuctionPage> {
+class _DiscoverCreatorPageState extends State<DiscoverCreatorPage> {
 
   final TextEditingController _searchInput = TextEditingController();
 
@@ -34,7 +35,7 @@ class _AuctionPageState extends State<AuctionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //get appbar widget from core > widget
-      appBar: AppBarWidget.plainAppBar(context: context, icons: FontAwesomeIcons.scaleUnbalanced, name: "Auction"),
+      appBar: AppBarWidget.plainAppBar(context: context, icons: FontAwesomeIcons.searchengin, name: "Search"),
       body: ScrollConfiguration(
         //to disable scroll shadow
         behavior: MyScrollBehavior(),
@@ -43,30 +44,26 @@ class _AuctionPageState extends State<AuctionPage> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //Header
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children:  [
-                    Container(
-                      width: 10,
-                      height: 10,
-                      decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(50)),
-                          color: Colors.red,
-                          border: Border.all(color: Colors.red)
-                      ),
-                    ),
-                    const SizedBox(width: 10,),
-                    const Text("Live Auction",
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                  ],
+                const Text("Discover Creator",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold
+                  ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(height: 10,),
+                SizedBox(
+                  width: SizeApps.width(context, size: 0.6),
+                  child: const Text("Follow at least five creators to build your feed",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 30,),
 
                 ///Search Input
                 TextFormField(
@@ -94,8 +91,8 @@ class _AuctionPageState extends State<AuctionPage> {
                   shrinkWrap: true,
                   children: const [
                     //get item from presentation > widget
-                    ItemListAuctionWidget(isSold: true, image: "assets/auction/auction1.png",),
-                    ItemListAuctionWidget(isSold: false, image: "assets/auction/auction2.png",)
+                    ItemListDiscoverCreatorWidget(isSold: true, image: "assets/auction/auction1.png",),
+                    ItemListDiscoverCreatorWidget(isSold: false, image: "assets/auction/auction2.png",)
                   ],
                 ),
 
@@ -109,4 +106,5 @@ class _AuctionPageState extends State<AuctionPage> {
       ),
     );
   }
+
 }

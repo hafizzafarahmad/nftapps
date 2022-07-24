@@ -30,7 +30,7 @@ class _DetailAuctionPageState extends State<DetailAuctionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //get appbar widget from core > widget
-      appBar: AppBarWidget.plainAppBar(context: context),
+      appBar: AppBarWidget.plainAppBar(context: context, icons: FontAwesomeIcons.image, name: "Silent Color"),
       body: ScrollConfiguration(
         //to disable scroll shadow
         behavior: MyScrollBehavior(),

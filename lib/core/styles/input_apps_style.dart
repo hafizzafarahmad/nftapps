@@ -12,7 +12,7 @@ class InputAppsStyle{
         filled: true,
         fillColor: ColorApps.lightGrey,
         suffixIcon: suffixIcon,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 25.0),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 15),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
           borderSide: const BorderSide(

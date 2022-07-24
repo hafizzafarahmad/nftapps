@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nftapps/core/widget/app_bar.dart';
 import 'package:nftapps/features/notification/presentation/widget/item_list_notification_widget.dart';
 
@@ -16,7 +17,7 @@ class _NotificationPageState extends State<NotificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //get appbar widget from core > widget
-      appBar: AppBarWidget.plainAppBar(context: context),
+      appBar: AppBarWidget.plainAppBar(context: context, icons: FontAwesomeIcons.bell, name: "Notification"),
       body: ScrollConfiguration(
         //to disable scroll shadow
         behavior: MyScrollBehavior(),
@@ -27,14 +28,14 @@ class _NotificationPageState extends State<NotificationPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 10,),
-                const Text("Notification",
-                  style: TextStyle(
-                      fontSize: 23,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black
-                  ),
-                ),
-                const SizedBox(height: 30,),
+                // const Text("Notification",
+                //   style: TextStyle(
+                //       fontSize: 23,
+                //       fontWeight: FontWeight.bold,
+                //       color: Colors.black
+                //   ),
+                // ),
+                // const SizedBox(height: 30,),
                 ListView(
                   // disable scroll listview
                   physics: const NeverScrollableScrollPhysics(),

@@ -48,5 +48,33 @@ class ButtonWidget{
       ),
     );
   }
+
+  static Widget linkSocial({VoidCallback? onPress, required Icon icon, required String text, double? fontSize}){
+    return ElevatedButton(
+      onPressed: onPress ?? (){},
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        // side:  BorderSide(width: 2, color: ColorApps.primaryColor,),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10),)
+        ),
+        primary:  ColorApps.lightGrey,
+        shadowColor: Colors.white,
+      ),
+      child: Row(
+        children: [
+          const SizedBox(width: 20,),
+          icon,
+          const SizedBox(width: 10,),
+          Text(text,
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: fontSize ?? 13
+            ),
+          ),
+        ],
+      )
+    );
+  }
 }
 
